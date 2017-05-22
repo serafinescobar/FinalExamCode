@@ -33,7 +33,21 @@ public class RocketHub extends Hub {
 			//	Determine if payment, call RateBLL.getPayment
 			//	
 			//	you should update lq, and then send lq back to the caller(s)
-			
+			double Rate = 0.0;
+			try {
+				lq.setdRate(RateBLL.getRate(lq.getiCreditScore()));
+			} catch (Exception rateException) {
+				rateException.printStackTrace();
+			} finally {
+				double r = (lq.getdRate()*.01) / 12;
+				double n = lq.getiTerm() * 12;
+				double p = lq.getdAmount();
+				double f = 0;
+				boolean t = false;
+
+				double Pymnt = rocketBase.RateBLL.getPayment(r, n, p, f, t);
+				lq.setdPayment(Pymnt);
+}
 			sendToAll(lq);
 		}
 	}

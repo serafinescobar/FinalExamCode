@@ -22,13 +22,20 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Annual Income" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#btnCalculatePayment" prefHeight="40.0" prefWidth="127.0" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Label text="Monthly Expenses" GridPane.rowIndex="3" />
-            <Label text="Mortgage Term" GridPane.rowIndex="4" />
-            <Label text="House Cost" />
-            <Label text="Down Payment" GridPane.rowIndex="1" />
-            <Label text="Calculated Payment" GridPane.rowIndex="5" />
+            
+				<Label text="House Cost" GridPane.rowIndex="3" />
+				<Button fx:id="btnCalculatePayment" mnemonicParsing="false" onAction="#btnCalculatePayment" prefHeight="40.0" prefWidth="127.0" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+				<Label text="Term" GridPane.rowIndex="4" />
+				<Label text="Income" GridPane.rowIndex="1" />
+				<Label text="Expenses" GridPane.rowIndex="2" />
+				<Label text="Mortgage Amt" GridPane.rowIndex="5" />
+            <Label text="Credit Score" />
+            <TextField fx:id="txtCreditScore" GridPane.columnIndex="1" />
+            <TextField fx:id="txtIncome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtExpenses" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtHouseCost" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label GridPane.columnIndex="1" GridPane.rowIndex="5" />
+<TextField fx:id="txtTerm" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </children>

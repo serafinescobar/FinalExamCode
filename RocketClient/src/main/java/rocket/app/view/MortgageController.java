@@ -47,6 +47,6 @@ public class MortgageController {
 		//			after it's returned back from the server, the payment (dPayment)
 		//			should be calculated.
 		//			Display dPayment on the form, rounded to two decimal places
-		
+		lblMortgagePaymentAmount.setText(String.format("%.2f", Math.abs(lRequest.getdPayment())));
 	}
 }
